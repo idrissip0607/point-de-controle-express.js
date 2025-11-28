@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactez-nous - Notre Entreprise</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/services">Nos Services</a></li>
+        <li><a href="/contact" class="active">Contactez-nous</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Contactez-nous</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Nos coordonnées</h2>
+        <div class="contact-info">
+          <p>
+            <strong>Adresse :</strong> 123 Rue de l'Entreprise, 75000 Paris,
+            France
+          </p>
+          <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+          <p><strong>Email :</strong> contact@notreentreprise.fr</p>
+          <p><strong>Horaires :</strong> Lundi à Vendredi, 9h - 17h</p>
+        </div>
+
+        <h2>Envoyez-nous un message</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nom complet :</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">Envoyer le message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Notre Entreprise. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
