@@ -16,7 +16,7 @@ const checkWorkingHours = (req, res, next) => {
   const hour = now.getHours(); // Heure actuelle (0-23)
   // Vérifier si nous sommes en semaine (lundi=1 à vendredi=5)
   // et pendant les heures de travail (9h à 17h)
-  if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
+  if (day >= 1 && day <= 6 && hour >= 9 && hour < 17) {
     next(); // Continuer vers la route suivante
   } else {
     // Si en dehors des heures de travail, afficher un message
@@ -59,7 +59,11 @@ app.get("/contact", (req, res) => {
 });
 
 // Démarrer le serveur
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Serveur démarré sur http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 3001;
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Serveur démarré sur http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
